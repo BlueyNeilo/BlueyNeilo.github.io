@@ -16,9 +16,9 @@
 
 constants:
   - &name Patrick Neilson
-  - &desc >- # this means to ignore newlines until "baseurl:"
+  - &desc 
     Computer Science student at Monash University.
-    Check out my blogs here. Hosted on GitHub Pages and made using Jekyll.
+    Check out my <a href="/blog/">blog</a> here. More content to follow.
   - &github BlueyNeilo
 
 
@@ -26,6 +26,7 @@ title: *name
 name: *name
 email: patrick.neilson.tech@gmail.com
 description: *desc
+about-description: *desc
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blueyneilo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  *github
