@@ -1,0 +1,14 @@
+<header class="header">
+  <h1 class="logo">
+    <a href="{{site.baseurl}}/" class="logo-link">{% if site.name %}{{site.name}}{% endif %}</a>
+  </h1>
+  <nav class="main-menu">
+    <ul>
+      {% for page in site.pages %}
+      {% if page.menubar %}
+      <li><a href="{{site.baseurl}}{{page.permalink}}">{{page.title}}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
