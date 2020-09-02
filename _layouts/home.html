@@ -2,46 +2,56 @@
 layout: default
 ---
 
-<div class="home">
-  <div class="page-heading">
-    <h2 class="page-title">About me</h2>
-  </div>
-  <div class="about">
-    <div class="container-face">
-      <img class="face" src="{{site.baseurl}}/assets/img/{% if site.pic %}{{ site.pic }}{% endif %}" alt="">
+<script>
+  $(document).ready(function() {
+    $("#typewriteText").typewrite({
+      actions: [{ type: "{{site.typewrite-text}}" }]
+    });
+  });
+</script>
+    <div class="jumbotron" style="text-align: center;">
+      <img class="author-profile-img" src="/assets/img/profile.png" />
+      <p class="jumbotron-heading">Hi, I am {{site.author}} !</p>
+      <p class="lead" id="typewriteText"></p>
+         {%- include github_star_button.html -%}
+         {%- include github_fork_button.html -%}
     </div>
-    <h2 class="tagline">{% if site.tagline %}{{site.tagline}}{% endif %}</h2>
-    <div class="about-description">
-      <p>{% if site.about-description %}{{site.about-description}}{% endif %}</p>
+    <div class="col-lg-8 offset-md-2">
+      <section id="recent-articles">
+        <div id="recent-articles-header">
+          <div id="recent-articles-title">
+            <h1 class="card-title">Recent Articles</h1>
+          </div>
+          <div id="recent-articles-show-all">
+            <a class="btn btn-lg btn-dark" href="/blog"> View All </a>
+          </div>
+        </div>
+        <br />
+
+        <ul>
+          {% for post in site.posts limit:5 %}
+          <li class="article-card">
+            <a href="{{post.url}}" class="article-card-link">
+              <div id="article-container">
+                <div id="article-img">
+                  <img
+                    src="/assets/img/{{site.author_logo}}"
+                    width="50px"
+                    height="50px"
+                  />
+                </div>
+                <div id="article-link">
+                    <p class="recent-article-link">{{post.title}} <span style="color: #ccc; font-size: 15px;"> - <i><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time></i></span></p>
+                  </div>
+                  <div id="article-alert">
+                  {% for cat in post.category limit:1 %}
+                   <button class="btn btn-sm btn-dark">{{cat}}</button>
+                  {% endfor %}
+                  </div>
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
     </div>
-    <div class="contact-contaiver">
-      <ul class="contact-list">
-
-        {% if site.email %}
-          <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i> {{site.email}}</a></li>
-        {% endif %}
-
-        {% if site.phone %}
-          <li class="phone"><a href="tel:{{site.phone}}"><i class="fa fa-phone"></i> {{site.phone}}</a></li>
-        {% endif %}
-
-        {% if site.website %}
-          <li class="website"><a href="http://{{site.website}}" target="_blank"><i class="fa fa-globe"></i> {{site.website}}</a></li>
-        {% endif %}
-
-        {% if site.linkedin %}
-          <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i> linkedin.com/in/{{site.linkedin}}</a></li>
-        {% endif %}
-
-        {% if site.github %}
-          <li class="github"><a href="http://github.com/{{site.github}}" target="_blank"><i class="fa fa-github"></i> github.com/{{site.github}}</a></li>
-        {% endif %}
-
-        {% if site.twitter %}
-          <li class="twitter"><a href="https://twitter.com/{{site.twitter}}" target="_blank"><i class="fa fa-twitter"></i> {{site.twitter}}</a></li>
-        {% endif %}
-
-      </ul>
-    </div>
-  </div>
-</div>
