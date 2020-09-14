@@ -9,6 +9,17 @@ layout: default
     });
   });
 </script>
+    <style>
+      [data-theme="dark"] {
+        --background-img: url('{{site.url}}{{site.baseurl}}/assets/img/dark-home-background.png');
+      }
+      [data-theme="light"] {
+        --background-img: url('{{site.url}}{{site.baseurl}}/assets/img/light-home-background.png');
+      }
+      .home-banner {
+        background-image: var(--background-img);
+      }
+    </style>
     <div class="home-banner">
       <img class="author-profile-img" src="/assets/img/profile.png" />
     </div>

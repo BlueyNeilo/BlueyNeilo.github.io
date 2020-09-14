@@ -58,7 +58,7 @@ author_project_details:
                 project_description: A simple arcade emulator project. Written using Rust.
                 project_url: https://github.com/BlueyNeilo/Chip8Emulator
                 visibility: true
-              - project_thumbnail: patchain.JPG
+              - project_thumbnail: patchain.png
                 project_title: Patchain
                 project_description: A blockchain prototype using proof of work concepts.
                 project_url: https://github.com/BlueyNeilo/patchain

@@ -173,7 +173,7 @@ DEPENDENCIES
   kramdown
   puma
   rack-jekyll
-  rake (>= 2.1.4)
+  rake
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
