@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 
-gem 'jekyll'
+# gem 'jekyll'
 gem 'bundler'
 gem 'kramdown'
 gem 'rack-jekyll'
 gem 'rake'
 gem 'puma'
-
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.

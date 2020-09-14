@@ -161,7 +161,6 @@ PLATFORMS
 DEPENDENCIES
   bundler
   devlopr (~> 0.4.5)
-  jekyll
   jekyll-admin (~> 0.10.2)
   jekyll-algolia (~> 1.6)
   jekyll-feed (~> 0.13.0)
@@ -174,7 +173,7 @@ DEPENDENCIES
   kramdown
   puma
   rack-jekyll
-  rake
+  rake (>= 2.1.4)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

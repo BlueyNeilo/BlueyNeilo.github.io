@@ -22,7 +22,6 @@ html[data-theme="dark"] {
     --card-background-color: rgb(32, 32, 34);
     --newsletter-background-color: #222324;
     --button-background-color: #111;
-    --home-background-image: url('/assets/img/dark-home-background.png');
 }
 
 html,
@@ -43,7 +42,6 @@ html[data-theme="light"] {
     --card-background-color: rgb(250, 250, 250);
     --newsletter-background-color: #00000008;
     --button-background-color: #fff;
-    --home-background-image: url('/assets/img/light-home-background.png');
 }
 
 @media (prefers-color-scheme: light) {
@@ -68,7 +66,6 @@ html[data-theme="light"] {
         --card-background-color: rgb(32, 32, 34);
         --newsletter-background-color: #222324;
         --button-background-color: #111;
-        --home-background-image: url('/assets/img/dark-home-background.png');
     }
 
     /* Light Mode */
@@ -91,7 +88,6 @@ html[data-theme="light"] {
         --social-link-color: #262222;
         --card-background-color: rgb(250, 250, 250);
         --button-background-color: #fff;
-        --home-background-image: url('/assets/img/light-home-background.png');
     }
 }
 
@@ -354,7 +350,6 @@ header {
 /* home banner */
 .home-banner {
     background-color: var(--main-background-color) !important;
-    background-image: var(--home-background-image);
     background-attachment: scroll;//fixed;
     background-size: 40%;
     background-repeat: no-repeat;
