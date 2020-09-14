@@ -22,6 +22,7 @@ html[data-theme="dark"] {
     --card-background-color: rgb(32, 32, 34);
     --newsletter-background-color: #222324;
     --button-background-color: #111;
+    --home-background-image: url('/assets/img/dark-home-background.png');
 }
 
 html,
@@ -42,9 +43,10 @@ html[data-theme="light"] {
     --card-background-color: rgb(250, 250, 250);
     --newsletter-background-color: #00000008;
     --button-background-color: #fff;
+    --home-background-image: url('/assets/img/light-home-background.png');
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
      /* Dark Mode */
     html,
     html[data-theme="dark"] {
@@ -66,6 +68,7 @@ html[data-theme="light"] {
         --card-background-color: rgb(32, 32, 34);
         --newsletter-background-color: #222324;
         --button-background-color: #111;
+        --home-background-image: url('/assets/img/dark-home-background.png');
     }
 
     /* Light Mode */
@@ -88,6 +91,7 @@ html[data-theme="light"] {
         --social-link-color: #262222;
         --card-background-color: rgb(250, 250, 250);
         --button-background-color: #fff;
+        --home-background-image: url('/assets/img/light-home-background.png');
     }
 }
 
@@ -347,13 +351,15 @@ header {
     background-color: black !important;
 }
 
-/* jumbotron */
-.jumbotron {
+/* home banner */
+.home-banner {
     background-color: var(--main-background-color) !important;
-    background-image: url('https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: var(--home-background-image);
+    background-attachment: scroll;//fixed;
+    background-size: 40%;
+    background-repeat: no-repeat;
     background-position: center;
+    text-align: center;
 }
 /* pagination */
 .pagination-link{
@@ -374,9 +380,10 @@ header {
     margin-left: 20px !important;
 }
 
-.jumbotron-heading{
-    color: #111;
-    font-size: 35px;
+.home-banner-heading {
+    color: var(--bold-color);
+    font-size: 40px;
+    text-align: center;
 }
 
 .lead {
@@ -575,6 +582,17 @@ header {
     }
 }
 
+#author_certifications {
+    .grid {
+        display: grid;
+        grid-gap: 20px 5px;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+    }
+    .badge-img {
+        width: 170px;
+    }
+}
 
 .company-logo {
     width: 100px;
@@ -582,8 +600,8 @@ header {
 }
 
 .author-profile-img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
 
 .blog-post {
@@ -724,7 +742,7 @@ footer {
                 white-space: nowrap;
 
             }
-            .jumbotron {
+            .home-banner {
                 padding: 10rem 1rem !important;
             }
 
@@ -804,7 +822,7 @@ footer {
           margin-left: -30px;
 
       }
-      .jumbotron {
+      .home-banner {
           padding: 10rem 1rem !important;
       }
 

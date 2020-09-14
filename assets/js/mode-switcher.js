@@ -14,7 +14,6 @@ function prefersColorTest(systemInitiatedDark) {
 }
 systemInitiatedDark.addListener(prefersColorTest);
 
-
 function modeSwitcher() {
 	let theme = sessionStorage.getItem('theme');
 	if (theme === "dark") {
@@ -25,7 +24,7 @@ function modeSwitcher() {
 		document.documentElement.setAttribute('data-theme', 'dark');
 		sessionStorage.setItem('theme', 'dark');
 		// document.getElementById("theme-toggle").innerHTML = "Light Mode";
-	} else if (systemInitiatedDark.matches) {
+	} else if (!systemInitiatedDark.matches) {
 		document.documentElement.setAttribute('data-theme', 'light');
 		sessionStorage.setItem('theme', 'light');
 		//let theme = sessionStorage.getItem('theme');

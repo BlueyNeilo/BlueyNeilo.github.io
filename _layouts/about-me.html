@@ -9,7 +9,6 @@ layout: default
         <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="profile-img" />
       </a>
       <h1 class="profile-name">{{ site.title }}</h1>
-      <p class="profile-bio">{{ site.subtitle }}</p>
       {% if site.github_username %} {%- include github_follow_button.html -%} {%
       endif %}
 
@@ -104,6 +103,19 @@ layout: default
       <h1>Coding Activity</h1>
 
       {%- include coding_activity.html -%}
+    </div>
+    {% endif %} {% if site.show_author_certifications == true %}
+    <div id="author_certifications" class="card">
+      <h1 class="card-title">Certifications</h1>
+      <br />
+      <div class="grid">
+        {% for cert in site.author_certifications %} {% if cert.visibility == true %}
+        <img
+          src="{{site.url}}{{site.baseurl}}/assets/img/certs/{{ cert.badge }}"
+          class="badge-img"
+        />
+        {% endif %} {% endfor %}
+      </div>
     </div>
     {% endif %}
   </div>
