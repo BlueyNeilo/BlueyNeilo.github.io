@@ -156,7 +156,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-algolia
-  - jekyll-menus
 
 
 # Exclude from processing.

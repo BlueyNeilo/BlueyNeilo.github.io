@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# gem 'jekyll'
-gem 'bundler'
+gem 'jekyll', '~> 4.2', '>= 4.1.1'
+gem 'bundler', '~> 2.3.8'
 gem 'kramdown'
 gem 'rack-jekyll'
 gem 'rake'
@@ -13,7 +13,7 @@ gem 'puma'
 
 # Plugins
 group :jekyll_plugins do
-    gem 'devlopr', '~> 0.4.5'
+    #gem 'devlopr', '~> 0.4.5'
     gem 'jgd', '~> 1.12'
     gem 'jekyll-feed', '~> 0.13.0'
     gem 'jekyll-paginate', '~> 1.1.0'
@@ -21,8 +21,7 @@ group :jekyll_plugins do
     gem 'jekyll-seo-tag', '~> 2.6.1'
     gem 'jekyll-sitemap', '~> 1.4.0'
     gem 'jekyll-algolia', '~> 1.6'
-    gem 'jekyll-menus', '~> 0.6.1'
-    gem 'jekyll-admin', '~> 0.10.2'
+    gem 'jekyll-admin', '~> 0.11.0'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -34,4 +33,4 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
-#gem "jekyll", "~> 4.0.0"
+gem "webrick", "~> 1.7"
